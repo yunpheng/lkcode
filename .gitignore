@@ -1,0 +1,12 @@
+*.class
+*.bak
+*.tmp
+*.log
+*.idea
+*.myeclipse
+*.setting
+/out
+.classpath
+.mymetadata
+.project
+
