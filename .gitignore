@@ -2,9 +2,9 @@
 *.bak
 *.tmp
 *.log
-.idea/
-.myeclipse/
-.setting/
+.idea
+.myeclipse
+.setting
 /out/
 .classpath
 .mymetadata
