@@ -18,15 +18,16 @@
     <!--
     <link rel="stylesheet" type="text/css" href="styles.css">
     -->
-    <script type="text/javascript" src="${ctx }/ui/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="${ctx }/ui/js/jquery.min.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/echarts-3.2.3/dist/echarts.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/config/cfgopts.js"></script>
 </head>
 
 <body>
-<div style="width: 800px;height: 600px;background-color: #00CC33;">
+<%--<div style="width: 800px;height: 600px;background-color: #00CC33;">
     <div id="treemap" style="width: 800px;height: 600px;"></div>
-</div>
+</div>--%>
+<div id="treemap" style="height: 100%;"></div>
 <script type="text/javascript">
     var treemapChart;
     $(function () {
@@ -38,12 +39,12 @@
     function showTreemap() {
         treemapChart.showLoading();
         $.getJSON('${ctx }/ui/echarts/echarts-3.2.3/data/asset/data/ec-option-doc-statistics-201604.json',
-                function (rawData) {
-                    treemapChart.hideLoading();
-                    var treemapOpt = getTreemapOpt(rawData);
-                    treemapOpt.title.text = '矩形树图';
-                    treemapChart.setOption(treemapOpt);
-                }
+            function (rawData) {
+                treemapChart.hideLoading();
+                var treemapOpt = getTreemapOpt(rawData);
+                treemapOpt.title.text = '矩形树图';
+                treemapChart.setOption(treemapOpt);
+            }
         );
     }
 </script>

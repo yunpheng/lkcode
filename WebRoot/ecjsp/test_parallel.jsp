@@ -18,15 +18,16 @@
     <!--
     <link rel="stylesheet" type="text/css" href="styles.css">
     -->
-    <script type="text/javascript" src="${ctx }/ui/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="${ctx }/ui/js/jquery.min.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/echarts-3.2.3/dist/echarts.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/config/cfgopts.js"></script>
 </head>
 
 <body>
-<div style="width: 800px;height: 600px;background-color: #00CC33;">
+<%--<div style="width: 800px;height: 600px;background-color: #00CC33;">
     <div id="parallel" style="width: 800px;height: 600px;"></div>
-</div>
+</div>--%>
+<div id="parallel" style="height: 100%;"></div>
 <script type="text/javascript">
     var parallelChart;
     $(function () {

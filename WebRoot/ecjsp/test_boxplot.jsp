@@ -18,15 +18,16 @@
     <!--
     <link rel="stylesheet" type="text/css" href="styles.css">
     -->
-    <script type="text/javascript" src="${ctx }/ui/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="${ctx }/ui/js/jquery.min.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/config/esl.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/config/configpath.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/config/cfgopts.js"></script>
 </head>
 <body>
-<div style="width: 600px;height: 400px;background-color: #00CC33;">
+<%--<div style="width: 600px;height: 400px;background-color: #00CC33;">
     <div id="boxplot" style="width: 600px;height: 400px;"></div>
-</div>
+</div>--%>
+<div id="boxplot" style="height: 100%;"></div>
 <script type="text/javascript">
     var boxplotChart;
     $(function () {

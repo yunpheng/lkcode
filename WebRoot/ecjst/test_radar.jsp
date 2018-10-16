@@ -18,7 +18,7 @@
     <!--
         <link rel="stylesheet" type="text/css" href="styles.css">
         -->
-    <script type="text/javascript" src="${ctx }/ui/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="${ctx }/ui/js/jquery.min.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/config/configpath.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/config/esl.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/config/configopts.js"></script>
