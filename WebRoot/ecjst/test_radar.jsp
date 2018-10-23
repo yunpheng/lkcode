@@ -19,9 +19,9 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
         -->
     <script type="text/javascript" src="${ctx }/ui/js/jquery.min.js"></script>
-    <script type="text/javascript" src="${ctx }/ui/echarts/config/configpath.js"></script>
+    <script type="text/javascript" src="${ctx }/ui/echarts/config/confpath.js"></script>
     <script type="text/javascript" src="${ctx }/ui/echarts/config/esl.js"></script>
-    <script type="text/javascript" src="${ctx }/ui/echarts/config/configopts.js"></script>
+    <script type="text/javascript" src="${ctx }/ui/echarts/config/optsconf.js"></script>
 </head>
 
 <body>

@@ -80,6 +80,150 @@ function getRadarOpt() {
     };
     return radarOpt;
 }
+
+// /////多系列柱形图//////////
+function getSerBarOpt() {
+    var serBarOpt = {
+        title: {
+            show: true,
+            text: '',
+            textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                fontWeight: 'bolder',
+                fontSize: 18,
+                color: '#343c51',
+                shadowColor: '#fff', // 默认透明
+                shadowBlur: 10
+            },
+            left: '1%',
+            top: 5
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            },
+            textStyle: {
+                fontSize: 16
+            }
+        },
+        legend: {
+            show: true,
+            orient: 'horizontal',
+            itemWidth: 10,
+            itemHeight: 7,
+            inactiveColor: '#787878',
+            textStyle: {
+                color: '#343c51',
+                fontSize: 14
+            },
+            right: '1%',
+            top: 5,
+            data: []
+        },
+        grid: {
+            show: false,
+            left: '1%',
+            right: '1%',
+            top: 60,
+            bottom: 5,
+            containLabel: true
+        },
+        toolbox: {
+            show: false,
+            feature: {
+                dataView: {
+                    show: true,
+                    readOnly: true
+                },
+                magicType: {
+                    show: true,
+                    type: ['line', 'bar']
+                },
+                restore: {
+                    show: true
+                }
+            },
+            iconStyle: {
+                normal: {
+                    borderColor: '#fff'
+                }
+            },
+            top: '5%',
+            right: '1%'
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: [],
+                axisLabel: {
+                    interval: 0,
+                    textStyle: {
+                        color: "#B0B1BA" // 刻度颜色
+                        // 刻度大小
+                    }
+                },
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false,
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                minInterval: 1,
+                nameGap: 12,
+                nameTextStyle: {
+                    color: "#B0B1BA" // 刻度颜色
+                },
+                axisLine: {
+                    show: false
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: "#B0B1BA" // 刻度颜色
+                        // 刻度大小
+                    }
+                },
+                axisTick: {
+                    show: false,
+                    alignWithLabel: true
+                }
+            }
+        ],
+        series: []
+    };
+    // 处理数据
+    serBarOpt.legend.data = ['吃饭', '喝水', '学习', '打游戏', '运动'];
+    serBarOpt.xAxis[0].data = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+    serBarOpt.series = [{
+        name: '吃饭',
+        type: 'bar',
+        data: [120, 132, 101, 134, 90, 230, 210]
+    }, {
+        name: '喝水',
+        type: 'bar',
+        data: [220, 182, 191, 234, 290, 330, 310]
+    }, {
+        name: '学习',
+        type: 'bar',
+        data: [150, 232, 201, 154, 190, 330, 410]
+    }, {
+        name: '打游戏',
+        type: 'bar',
+        data: [320, 332, 301, 334, 390, 330, 320]
+    }, {
+        name: '运动',
+        type: 'bar',
+        data: [820, 932, 901, 934, 1290, 1330, 1320]
+    }];
+
+    return serBarOpt;
+}
+
 ///////////////////////////////
 /////////////////////////
 function getGzMapOptByJs() {
@@ -241,6 +385,7 @@ function getGzMapOptByJs() {
     };
     return gzMapOpt;
 }
+
 ///////////////////////////////
 /////////���ص�ͼ��GeoJson���///////////
 //////////��ʼ����ͼmapchart/////
@@ -258,6 +403,7 @@ function initMapGeoJson(jsonUrl, mType, mId) {
     });
     return mapChart;
 }
+
 /////////////////////////////
 //////////////////////////////
 function formatGeoData(tData) {

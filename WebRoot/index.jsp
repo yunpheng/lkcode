@@ -92,12 +92,12 @@
                     <!-- AREA CHART -->
                     <div class="box box-primary" id="box">
                         <div class="box-header">
-                            <h3 class="box-title">dd</h3>
+                            <h3 class="box-title"></h3>
                         </div>
                         <div class="box-body chart-responsive">
                             <div class="chart" id="revenue-chart" style="height: 500px;text-align: center">
                                 <iframe id="mainChartFrame" name="mainChartFrame" scrolling="no" frameborder="0"
-                                      src="http://localhost:8088/testech/ecjsp/test_pie.jsp"  style="height: 500px;width: 80%;background-color: #5bc0de">
+                                      src="http://localhost:8088/testech/ecjsp/test_pie.jsp"  style="height: 100%;width: 100%;background-color: #5bc0de">
 
                                 </iframe>
                             </div>
